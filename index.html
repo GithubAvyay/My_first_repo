@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chatting</title>
+        <link rel="icon" href="chatting icon.jpg">
+    </head>
+    <body>
+        <ul id="message"></ul>
+        <br>
+        <input name="a" id="text">
+        <button id="send">Send</button>
+        <script>
+            var message = document.getElementById('message');
+            var text = document.getElementById('text');
+            var send = document.getElementById('send');
+
+            send.addEventListener("click", function(){
+                var newMessage = document.createElement("li");
+                newMessage.innerHTML = text.value;
+                message.appendChild(newMessage);
+                text.value = "";
+            });
+        </script>
+    </body>
+</html>
